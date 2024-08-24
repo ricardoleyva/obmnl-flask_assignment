@@ -65,7 +65,20 @@
                 {% endfor %}
             </tbody>
         </table>
-
+        <table class="table transaction-table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th style="text-align: center;">
+                        {% if balance_flag %}
+                            {{ total_amount }}
+                        {% endif %}
+                    </th>
+                </tr>
+            </thead>
+            
+        </table>
         <div class="d-flex justify-content-center">
             <a class="btn btn-success" href="{{ url_for('add_transaction') }}">Add Transaction</a>
         </div>
